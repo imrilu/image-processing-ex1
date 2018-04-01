@@ -1,0 +1,4 @@
+Q1: If a division will have a gray level segment with no pixels, the procedure will crash.
+Answer: Because we're calculating qi for each segmant using a weighted average, the fact there's no pixels in a given
+segment means we're dividing by 0. We will try to calculate the weighted average but since we're dividing by the 
+sum of the total pixels in the segment, the procedure will crash with a 'division by zero' error.
